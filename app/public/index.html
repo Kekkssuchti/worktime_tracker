@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rehn Arbeitszeit</title>
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <h1 id = "title">Rehn Arbeitszeit</h1>
+    <h3 id = "subtitle">Arbeitszeit erfassen</h3>
+    <div id="clock">
+      <div id="time">
+        <span id="full_time"></span>
+      </div>
+
+      <button id= "start_now" onclick="startTime()">Starte Arbeitszeit jetzt</button>
+      <button id= "stop_now" onclick="endTime()">Stoppe Arbeitszeit jetzt</button>
+
+      <form>
+        <label for="time_input">Wähle deine Arbeitszeiten selbst aus: </label>
+        <div></div>
+        <p>
+          Wähle Arbeitsstartzeit aus: <input type="time" id="time_started_input" required/>
+          <button id= "start_time_input_submit" onclick="startTimeInput()">Startzeit speichern</button>
+        </p>      
+      </form>
+      <form>
+        <p> 
+          Wähle Arbeitsendzeit aus: <input type="time" id="time_ended_input" required/>
+          <button id= "end_time_input_submit" onclick="endTimeInput()"> Endzeit speichern</button>
+        </p>
+      </form>
+
+      <div id="work_time">
+        <span id="time_started"></span>
+        <span id="time_ended"></span>
+        <span></span>
+        <span id="time_worked_min"></span>
+
+</body>
+
+</html>

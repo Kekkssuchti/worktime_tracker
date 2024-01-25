@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rehn Arbeitszeit</title>
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <h1 id = "title">Rehn Arbeitszeit</h1>
+    <h3 id = "subtitle">Arbeitszeit erfassen</h3>
+    <div id="clock">
+      <div id="time">
+        <h4>Heute ist: <span id="full_time"></span> </h4>
+      </div>
+      <div>
+        <button id= "start_now" onclick="startTime()">Starte Arbeitszeit jetzt</button>
+        <button id= "stop_now" onclick="endTime()">Stoppe Arbeitszeit jetzt</button>
+        <p></p>
+      </div>
+      <div>
+        <form>
+          <label>Wähle deine Arbeitszeiten selbst aus: </label>
+          <p>
+            Wähle Arbeitsstartzeit aus: <input type="time" id="time_started_input" required autocomplete="off"/>
+            <input type="submit" id= "start_time_input_submit" onclick="startTimeInput()" value="Startzeit speichern"></input>
+          </p>      
+        </form>
+        <form>
+          <p> 
+            Wähle Arbeitsendzeit aus: <input type="time" id="time_ended_input" required autocomplete="off"/>
+            <input type="submit" id= "end_time_input_submit" onclick="endTimeInput()" value="Endzeit speichern"> </input>
+          </p>
+        </form>
+        <form>  
+          <p>
+            Wähle Pausenzeit aus (in Minuten): <input type="number" id="break_time_input" required autocomplete="off" max="300"/>
+            <input type="submit" id= "pause_time_input_submit" onclick="pauseTimeInput()" value="Pausenzeit speichern"> </input>
+          </p>
+        </form>
+      </div>
+
+      <div id="work_time">
+        <h4>Arbeitszeit heute: <span id="time_worked"></span> </h4>
+        <p><span id="time_started"></span><span id="time_ended"></span><span id="time_break"></span></p>
+        <p><span id="time_worked_min"></span>min</p>
+        <p><span id="time_worked_h"></span>h</p>
+  </body>
+</html>
